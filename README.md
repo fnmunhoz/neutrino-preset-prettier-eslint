@@ -1,26 +1,34 @@
-# Neutrino preset to integrate Prettier and ESLint in a friendly way
+# Neutrino preset to use Prettier with ESLint in a friendly way
 
-`neutrino-preset-prettier-eslint` is a [Neutrino](https://neutrino.js.org/) preset that integrates the [Prettier](https://github.com/prettier/prettier) formatter with [neutrino-preset-airbnb-base](https://neutrino.js.org/presets/neutrino-preset-airbnb-base).
+`neutrino-preset-prettier-eslint` is a [Neutrino](https://neutrino.js.org/) preset to use [Prettier](https://github.com/prettier/prettier) in a way it doesn't conflict with ESLint.
 
 ## Features
 
-- Zero upfront configuration necessary to start making your code prettier 💅
+- Almost zero configuration to start making your code prettier 💅
 - Turns off all ESLint rules that are unnecessary or might conflict with prettier (using [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier))
-- Runs Prettier as an ESLint rule, allowing keep the consistency across the team and the CI (using [eslint-plugin-prettier](https://github.com/not-an-aardvark/eslint-plugin-prettier))
+- Runs Prettier as an ESLint rule, allowing keep the consistency across the team and the adds the possibility to validate the format on CI (using [eslint-plugin-prettier](https://github.com/not-an-aardvark/eslint-plugin-prettier))
 - Format the code from the command line like `npm run format` (using [prettier-eslint](https://github.com/prettier/prettier-eslint))
+
+## ESLint preset
+
+This preset supports integration with ESLint through the use of any preset based on `[neutrino-middleware-eslint](https://neutrino.js.org/middleware/neutrino-middleware-eslint/)`, as for example `[neutrino-preset-airbnb-base](https://neutrino.js.org/presets/neutrino-preset-airbnb-base/)`.
+
+Just follow the Neutrino's documentation instructions for the chosen preset and after that, the instructions bellow.
 
 ## Requirements
 
 - Node.js v6.9+
-- Yarn or NPM client
-- Neutrino v5, Neutrino build preset
-- `neutrino-preset-airbnb-base`
+- NPM or Yarn client
+- Neutrino v5
+- A ESLint preset
 
 ## Installation
 
 `neutrino-preset-prettier-eslint` can be installed via the Yarn or NPM clients.
 
-Inside your project, make sure `neutrino`, `neutrino-preset-airbnb-base` and `neutrino-preset-prettier-eslint` are development dependencies.
+Inside your project, make sure `neutrino`, and `neutrino-preset-prettier-eslint` are development dependencies.
+
+As mentioned above you will need an ESLint preset of your choice.
 
 You will also be using another Neutrino preset for building your application source code.
 
@@ -38,11 +46,11 @@ You will also be using another Neutrino preset for building your application sou
 
 ## Quickstart
 
-After adding the preset to your Neutrino-built project, edit your project's package.json to add the preset for prettier **after** `neutrino-preset-airbnb-base` and **before** your build preset.
-
 We recommend setup Neutrino with `neutrino.use` in your package.json.
 
-For example, if you are building your project using `neutrino-preset-web`:
+Be aware that the order of the presets are important.
+
+For example, if you are using `neutrino-preset-airbnb-base` and `neutrino-preset-web`:
 
 ```json
 {
@@ -56,7 +64,7 @@ For example, if you are building your project using `neutrino-preset-web`:
 }
 ```
 
-Also, create the `format` script in your package.json scripts section:
+Also, create the `format` and `lint` scripts in your package.json scripts section:
 
 ```json
 "scripts": {
@@ -70,6 +78,12 @@ Also, create the `format` script in your package.json scripts section:
 Now you can format all your JS code inside src folder with:
 
 #### Yarn
+
+ps: [yarn users](https://github.com/yarnpkg/yarn/issues/760) will also need to install `prettier-eslint-cli` to use the format CLI:
+
+```bash
+❯ yarn add --dev prettier-eslint-cli
+```
 
 ```bash
 ❯ yarn run format
