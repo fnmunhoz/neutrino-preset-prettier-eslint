@@ -6,8 +6,8 @@
 
 - Almost zero configuration to start making your code prettier 💅
 - Turns off all ESLint rules that are unnecessary or might conflict with prettier (using [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier))
-- Runs Prettier as an ESLint rule, allowing keep the consistency across the team and the adds the possibility to validate the format on CI (using [eslint-plugin-prettier](https://github.com/not-an-aardvark/eslint-plugin-prettier))
-- Format the code from the command line like `npm run format` (using [prettier-eslint](https://github.com/prettier/prettier-eslint))
+- Runs Prettier as an ESLint rule, allowing keep the consistency across the team and format validation on CI (using [eslint-plugin-prettier](https://github.com/not-an-aardvark/eslint-plugin-prettier))
+- Format the code from command line like `npm run format` (using [prettier-eslint](https://github.com/prettier/prettier-eslint))
 
 ## ESLint preset
 
