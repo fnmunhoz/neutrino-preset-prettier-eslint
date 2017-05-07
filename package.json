@@ -1,6 +1,6 @@
 {
   "name": "neutrino-preset-prettier-eslint",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Neutrino preset to use Prettier with ESLint in a friendly way",
   "main": "index.js",
   "scripts": {
@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/fnmunhoz/neutrino-preset-prettier-eslint",
   "bugs": {
-    "url" : "https://github.com/fnmunhoz/neutrino-preset-prettier-eslint/issues"
+    "url": "https://github.com/fnmunhoz/neutrino-preset-prettier-eslint/issues"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/fnmunhoz/neutrino-preset-prettier-eslint.git"
+    "type": "git",
+    "url": "https://github.com/fnmunhoz/neutrino-preset-prettier-eslint.git"
   }
 }
