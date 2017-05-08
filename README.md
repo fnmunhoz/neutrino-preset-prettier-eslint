@@ -64,7 +64,7 @@ For example, if you are using [`neutrino-preset-airbnb-base`](https://neutrino.j
 }
 ```
 
-Also, create the `format` and `lint` scripts in your package.json scripts section:
+Then, create the `format` and `lint` scripts in your package.json scripts section:
 
 ```json
 "scripts": {
@@ -94,7 +94,7 @@ ps: [yarn users](https://github.com/yarnpkg/yarn/issues/760) will also need to i
 ❯ npm run format
 ```
 
-You can also lint your code, and it will use prettier for format rules, and ESLint for any other rules that you have configured:
+You can also lint your code. It will use Prettier for format rules, and ESLint for any other rules that you have configured:
 
 #### Yarn
 
@@ -107,7 +107,7 @@ You can also lint your code, and it will use prettier for format rules, and ESLi
 ❯ npm run lint
 ```
 
-This can be very useful to ensure on a Continuous Integration environment that the code is consistent with prettier format.
+This can be very useful to ensure, on a Continuous Integration environment, that the code is consistent with prettier format.
 
 ## Editor integration
 
