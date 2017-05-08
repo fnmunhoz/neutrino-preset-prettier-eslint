@@ -115,11 +115,11 @@ You don't need to use the command line during your development process. Prettier
 
 #### Atom integration
 
-[Prettier for Atom](https://github.com/prettier/prettier-atom) is the official package to integrate Prettier on Atom. Make sure you enable the prettier-eslint on the package settings and you must be good to go.
+[Prettier for Atom](https://github.com/prettier/prettier-atom) is the official package to integrate Prettier on Atom. Make sure you enable prettier-eslint support on the package settings and you must be good to go.
 
 Sometimes it would be necessary to restart the editor after changing settings, so if something is not working as expected, maybe this would solve the issue.
 
-During my setup I came across an issue with Atom and `neutrino-preset-airbnb-base` that was breaking the integration.
+During my setup I came across an issue with Atom and `neutrino-preset-airbnb-base` that was breaking the integration with Atom.
 
 I had to do an ugly workaround to make it work. In simple terms, you will probably need to install this fork of `nodejs-depd` on your project:
 
