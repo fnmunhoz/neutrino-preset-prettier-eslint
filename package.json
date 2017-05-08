@@ -1,6 +1,6 @@
 {
   "name": "neutrino-preset-prettier-eslint",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Neutrino preset to use Prettier with ESLint in a friendly way",
   "main": "index.js",
   "scripts": {
